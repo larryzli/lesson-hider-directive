@@ -18,4 +18,8 @@ angular.module("directivePractice").controller("lessonCtrl", function($scope) {
             alert(`${lesson} is not scheduled yet.`);
         }
     };
+    $scope.removeLesson = lesson => {
+        $scope.lessonIndex = $scope.lessons.findIndex(cur => cur === lesson);
+        $scope.lessons.splice($scope.lessonIndex, 1);
+    };
 });

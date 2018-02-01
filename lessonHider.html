@@ -1,1 +1,5 @@
-<li ng-click="dayAlert({lesson: lesson, day: lessonDay})">{{lesson}}</li>
+<li ng-style="crossed ? {'text-decoration': 'line-through'} : {}">
+    <input ng-model='crossed' type="checkbox"> {{lesson}}
+    <button ng-click="dayAlert({lesson: lesson, day: lessonDay})">Which Day?</button>
+    <button ng-click="delete({lesson: lesson})">Remove</button>
+</li>
